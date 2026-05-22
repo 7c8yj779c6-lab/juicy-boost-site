@@ -1,0 +1,288 @@
+/* ===== BASE ===== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: #050d1f;
+background-image:
+radial-gradient(ellipse at 15% 40%, rgba(0, 60, 130, 0.4) 0%, transparent 55%),
+radial-gradient(ellipse at 85% 20%, rgba(0, 80, 160, 0.3) 0%, transparent 55%),
+radial-gradient(ellipse at 50% 80%, rgba(0, 40, 100, 0.35) 0%, transparent 60%);
+color: white;
+font-family: 'Segoe UI', Arial, sans-serif;
+min-height: 100vh;
+padding-bottom: 100px;
+}
+
+/* ===== BANNIÈRE ===== */
+#banniere {
+width: 100%;
+overflow: hidden;
+max-height: 220px;
+}
+
+#banniere img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+object-position: center;
+display: block;
+}
+
+/* ===== CONTENU PRINCIPAL ===== */
+#contenu {
+display: flex;
+gap: 18px;
+padding: 20px 16px;
+align-items: flex-start;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* ===== CASE DISCORD (gauche) ===== */
+#discord-box {
+width: 25vw;
+min-width: 160px;
+max-width: 260px;
+min-height: 25vh;
+border: 2px solid #ff0000;
+box-shadow:
+0 0 8px #ff0000,
+0 0 20px rgba(255, 0, 0, 0.4),
+inset 0 0 10px rgba(255, 0, 0, 0.05);
+border-radius: 14px;
+background: rgba(255, 0, 0, 0.05);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 20px;
+flex-shrink: 0;
+}
+
+#discord-inner p {
+font-size: 14px;
+color: #ffaaaa;
+margin-bottom: 12px;
+}
+
+#discord-link {
+display: inline-block;
+background: #5865F2;
+color: white;
+text-decoration: none;
+padding: 10px 16px;
+border-radius: 10px;
+font-weight: bold;
+font-size: 13px;
+transition: background 0.2s;
+}
+
+#discord-link:hover {
+background: #4752c4;
+}
+
+/* ===== FILE D'ATTENTE (centre) ===== */
+#file-box {
+flex: 1;
+border: 2px solid #00cfff;
+box-shadow:
+0 0 8px #00cfff,
+0 0 22px rgba(0, 207, 255, 0.35),
+inset 0 0 10px rgba(0, 207, 255, 0.04);
+border-radius: 14px;
+background: rgba(0, 207, 255, 0.04);
+padding: 22px;
+min-height: 320px;
+}
+
+#file-box h2 {
+color: #00cfff;
+font-size: 20px;
+margin-bottom: 16px;
+text-align: center;
+text-shadow: 0 0 8px #00cfff;
+}
+
+#liste-container {
+max-height: 420px;
+overflow-y: auto;
+}
+
+#liste-file {
+list-style: none;
+}
+
+#liste-vide {
+color: #4a7a8a;
+text-align: center;
+padding: 30px 0;
+font-style: italic;
+}
+
+#liste-file li {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 11px 14px;
+border-bottom: 1px solid rgba(0, 207, 255, 0.15);
+font-size: 15px;
+transition: background 0.2s;
+}
+
+#liste-file li:hover {
+background: rgba(0, 207, 255, 0.07);
+border-radius: 8px;
+}
+
+.rang {
+color: #00cfff;
+font-weight: bold;
+margin-right: 10px;
+min-width: 28px;
+}
+
+.pseudo-nom {
+flex: 1;
+}
+
+.btn-retirer {
+background: transparent;
+border: 1px solid #ff4444;
+color: #ff4444;
+border-radius: 7px;
+cursor: pointer;
+padding: 4px 10px;
+font-size: 12px;
+transition: all 0.2s;
+}
+
+.btn-retirer:hover {
+background: rgba(255, 68, 68, 0.15);
+}
+
+/* ===== PRIX (droite) ===== */
+#prix-box {
+width: 230px;
+border: 2px solid #00cfff;
+box-shadow:
+0 0 8px #00cfff,
+0 0 22px rgba(0, 207, 255, 0.35),
+inset 0 0 10px rgba(0, 207, 255, 0.04);
+border-radius: 14px;
+background: rgba(0, 207, 255, 0.04);
+padding: 18px;
+flex-shrink: 0;
+}
+
+#prix-box h2 {
+color: #00cfff;
+font-size: 17px;
+margin-bottom: 14px;
+text-align: center;
+text-shadow: 0 0 8px #00cfff;
+}
+
+.prix-section {
+margin-bottom: 16px;
+}
+
+.prix-section h3 {
+font-size: 13px;
+color: #7ee8ff;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 8px;
+border-bottom: 1px solid rgba(0, 207, 255, 0.2);
+padding-bottom: 4px;
+}
+
+.prix-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 6px 0;
+font-size: 13px;
+gap: 8px;
+}
+
+.prix-label {
+color: #a8d8e8;
+flex: 1;
+font-size: 12px;
+}
+
+.prix-valeur {
+color: #ffffff;
+font-weight: bold;
+background: rgba(0, 207, 255, 0.15);
+padding: 3px 8px;
+border-radius: 6px;
+white-space: nowrap;
+font-size: 13px;
+}
+
+.highlight .prix-valeur {
+background: rgba(255, 200, 0, 0.2);
+color: #ffd700;
+}
+
+.prix-paiement {
+margin-top: 14px;
+font-size: 12px;
+color: #7ee8ff;
+text-align: center;
+padding: 8px;
+border: 1px solid rgba(0, 207, 255, 0.25);
+border-radius: 8px;
+background: rgba(0, 207, 255, 0.06);
+}
+
+/* ===== BOUTON PALPITANT ===== */
+#btn-rejoindre {
+position: fixed;
+bottom: 28px;
+left: 28px;
+background: linear-gradient(135deg, #cc0000, #ff2222);
+color: white;
+border: none;
+padding: 16px 26px;
+border-radius: 50px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+animation: palpite 1.8s ease-in-out infinite;
+box-shadow: 0 0 14px rgba(255, 0, 0, 0.5), 0 4px 15px rgba(0,0,0,0.4);
+z-index: 999;
+letter-spacing: 0.3px;
+}
+
+@keyframes palpite {
+0% { transform: scale(1); box-shadow: 0 0 14px rgba(255,0,0,0.5); }
+50% { transform: scale(1.03); box-shadow: 0 0 22px rgba(255,0,0,0.75); }
+100% { transform: scale(1); box-shadow: 0 0 14px rgba(255,0,0,0.5); }
+}
+
+#btn-rejoindre:hover {
+animation: none;
+transform: scale(1.05);
+background: linear-gradient(135deg, #ee0000, #ff4444);
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 700px) {
+#contenu {
+flex-direction: column;
+}
+#discord-box {
+width: 100%;
+max-width: 100%;
+min-height: 100px;
+}
+#prix-box {
+width: 100%;
+}
+}
