@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juicy's Boost</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======= BANNIÈRE EN HAUT ======= -->
+<div id="banniere">
+<img src="banniere.png" alt="Juicy Boost">
+</div>
+
+<!-- ======= CONTENU PRINCIPAL ======= -->
+<div id="contenu">
+
+<!-- COLONNE GAUCHE : lien Discord -->
+<div id="discord-box">
+<div id="discord-inner">
+<p>🎮 Rejoins le serveur</p>
+<a id="discord-link" href="LIEN_DISCORD_ICI" target="_blank">
+Cliquez ici pour rejoindre
+</a>
+</div>
+</div>
+
+<!-- COLONNE CENTRE : file d'attente -->
+<div id="file-box">
+<h2>🎯 File d'attente</h2>
+<div id="liste-container">
+<ul id="liste-file">
+<li id="liste-vide">Personne pour l'instant...</li>
+</ul>
+</div>
+</div>
+
+<!-- COLONNE DROITE : prix -->
+<div id="prix-box">
+<h2>💰 Tarifs Boost</h2>
+
+<div class="prix-section">
+<h3>🏅 Ranked</h3>
+<div class="prix-item">
+<span class="prix-label">Jusqu'à Mythique</span>
+<span class="prix-valeur">5€</span>
+</div>
+<div class="prix-item">
+<span class="prix-label">Mythique → Légendaire</span>
+<span class="prix-valeur">5€ / rank</span>
+</div>
+<div class="prix-item highlight">
+<span class="prix-label">Mythique → Légendaire (pack)</span>
+<span class="prix-valeur">12€</span>
+</div>
+</div>
+
+<div class="prix-section">
+<h3>🪜 Ladder</h3>
+<div class="prix-item">
+<span class="prix-label">0 → 1 000 pts</span>
+<span class="prix-valeur">5€</span>
+</div>
+<div class="prix-item">
+<span class="prix-label">1 000 → 2 000 pts</span>
+<span class="prix-valeur">10€</span>
+</div>
+</div>
+
+<div class="prix-paiement">
+💳 Paiement via <strong>PayPal</strong> uniquement
+</div>
+</div>
+
+</div>
+
+<!-- ======= BOUTON EN BAS À GAUCHE ======= -->
+<button id="btn-rejoindre" onclick="rejoindreFile()">
+🔴 Rejoindre la file d'attente
+</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
