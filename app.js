@@ -1,5 +1,5 @@
 const SUPABASE_URL = "https://jivhgkrajycynjekpnaf.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imppdmhna3JhanljeW5qZWtwbmFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk0NjkwMDEsImV4cCI6MjA5NTA0NTAwMX0.Kc8o1SDDMJIa7WMTmlohIguuVyDEV-Cww6IV7-3Fw9w";
 const { createClient } = supabase;
 const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -53,7 +53,7 @@ liste.appendChild(li);
 
 async function rejoindreFile() {
 if (!monPseudo) {
-const saisi = prompt("✏️ Entre ton pseudo Discord :");
+const saisi = prompt("✏ Entre ton pseudo Discord :");
 if (!saisi || saisi.trim() === "") return;
 monPseudo = saisi.trim();
 localStorage.setItem("juicy_pseudo", monPseudo);
@@ -94,4 +94,3 @@ chargerFile();
 
 chargerFile();
 setInterval(chargerFile, 5000);
-
