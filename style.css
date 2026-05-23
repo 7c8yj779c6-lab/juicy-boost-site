@@ -48,7 +48,7 @@ gap: 6px;
 border: 2px solid white;
 border-radius: 0px;
 background: transparent;
-padding: 10px;
+padding: 3px 6px;
 animation: battre-cadre 1.8s ease-in-out infinite;
 }
 
