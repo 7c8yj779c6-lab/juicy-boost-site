@@ -146,3 +146,34 @@ chargerFile();
 
 chargerFile();
 setInterval(chargerFile, 5000);
+
+// ===== FAQ =====
+const FAQ = [
+{
+question: "Qu'est-ce qu'un boost ?",
+reponse: "Un boost, c'est un service que l'on demande à quelqu'un afin d'augmenter son rang ou ses prestiges (Pour Brawl Stars) et où quelqu'un joue sur notre compte contre de l'argent pour atteindre le rang ou prestige désiré."
+},
+{
+question: "Je n'ai pas PayPal, comment puis-je payer ?",
+reponse: "Ne vous inquiétez pas, à la place de l'argent, vous pouvez envoyer un Brawl Pass et le boost s'effectuera quand même."
+},
+{
+question: "Comment puis-je être sûr de ne pas être « scam » ?",
+reponse: "Pour un boost et peu importe la personne, on ne peut pas être sûr de ne pas être scam. C'est à vous de nous faire confiance. Nous pouvons répondre à vos questions sur Discord dès lors que vous ouvrez un ticket."
+},
+{
+question: "Combien de temps prend le boost avant d'être accompli ?",
+reponse: "Cela dépend du rang que vous avez et de celui que vous souhaitez atteindre. Pour exemple, de Mythique à Légendaire, cela prend entre 6h et 24h au grand maximum."
+}
+];
+
+function ouvrirFaq(index) {
+document.getElementById("faq-modal-question").textContent = FAQ[index].question;
+document.getElementById("faq-modal-reponse").textContent = FAQ[index].reponse;
+document.getElementById("faq-overlay").classList.add("actif");
+}
+
+function fermerFaq() {
+document.getElementById("faq-overlay").classList.remove("actif");
+}
+
