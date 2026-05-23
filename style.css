@@ -42,7 +42,15 @@ max-width: 1200px;
 margin: 0 auto;
 }
 
-/* ===== CASE DISCORD (gauche) ===== */
+/* ===== COLONNE GAUCHE ===== */
+#colonne-gauche {
+display: flex;
+flex-direction: column;
+gap: 16px;
+flex-shrink: 0;
+}
+
+/* ===== CASE DISCORD ===== */
 #discord-box {
 width: 25vw;
 min-width: 160px;
@@ -60,7 +68,6 @@ align-items: center;
 justify-content: center;
 text-align: center;
 padding: 20px;
-flex-shrink: 0;
 }
 
 #discord-inner p {
@@ -85,7 +92,51 @@ transition: background 0.2s;
 background: #4752c4;
 }
 
-/* ===== FILE D'ATTENTE (centre) ===== */
+/* ===== CASE BOOSTERS ===== */
+#boosters-box {
+width: 25vw;
+min-width: 160px;
+max-width: 260px;
+border: 2px solid #00cfff;
+box-shadow:
+0 0 8px #00cfff,
+0 0 22px rgba(0, 207, 255, 0.35),
+inset 0 0 10px rgba(0, 207, 255, 0.04);
+border-radius: 14px;
+background: rgba(0, 207, 255, 0.04);
+padding: 16px;
+flex-shrink: 0;
+}
+
+#boosters-box h2 {
+color: #00cfff;
+font-size: 16px;
+margin-bottom: 12px;
+text-align: center;
+text-shadow: 0 0 8px #00cfff;
+}
+
+#boosters-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+
+.booster-img {
+width: 100%;
+aspect-ratio: 1;
+object-fit: cover;
+border-radius: 8px;
+border: 1px solid rgba(0, 207, 255, 0.3);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.booster-img:hover {
+transform: scale(1.05);
+box-shadow: 0 0 10px rgba(0, 207, 255, 0.5);
+}
+
+/* ===== FILE D'ATTENTE ===== */
 #file-box {
 flex: 1;
 border: 2px solid #00cfff;
@@ -164,7 +215,7 @@ transition: all 0.2s;
 background: rgba(255, 68, 68, 0.15);
 }
 
-/* ===== PRIX (droite) ===== */
+/* ===== PRIX ===== */
 #prix-box {
 width: 230px;
 border: 2px solid #00cfff;
@@ -257,7 +308,6 @@ cursor: pointer;
 animation: palpite 1.8s ease-in-out infinite;
 box-shadow: 0 0 14px rgba(255, 0, 0, 0.5), 0 4px 15px rgba(0,0,0,0.4);
 z-index: 999;
-letter-spacing: 0.3px;
 }
 
 @keyframes palpite {
@@ -269,7 +319,6 @@ letter-spacing: 0.3px;
 #btn-rejoindre:hover {
 animation: none;
 transform: scale(1.05);
-background: linear-gradient(135deg, #ee0000, #ff4444);
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
@@ -277,12 +326,15 @@ background: linear-gradient(135deg, #ee0000, #ff4444);
 #contenu {
 flex-direction: column;
 }
-#discord-box {
+#colonne-gauche {
+width: 100%;
+}
+#discord-box, #boosters-box {
 width: 100%;
 max-width: 100%;
-min-height: 100px;
 }
 #prix-box {
 width: 100%;
 }
 }
+
