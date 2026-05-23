@@ -151,19 +151,19 @@ setInterval(chargerFile, 5000);
 const FAQ = [
 {
 question: "Qu'est-ce qu'un boost ?",
-reponse: "Un boost, c'est un service que l'on demande à quelqu'un afin d'augmenter son rang ou ses prestiges (Pour Brawl Stars) et où quelqu'un joue sur notre compte contre de l'argent pour atteindre le rang ou prestige désiré."
+reponse: "Un boost est un service que l'on demandeà quelqu'un afin d'augmenter son rang, ses trophés ou ses prestiges (Dans Brawl Star). Concrètement, une personne plus expérimentée que vous joue sur votre compte pour atteindre l'objectif pour lequel vous avez payer. Le But est de gagner plus rapidement en progrssion et d'atteindre un niveau qui demanderait beaucoup plus de temps et d'efforts."
 },
 {
 question: "Je n'ai pas PayPal, comment puis-je payer ?",
-reponse: "Ne vous inquiétez pas, à la place de l'argent, vous pouvez envoyer un Brawl Pass et le boost s'effectuera quand même."
+reponse: "Ne vous inquiétez pas, si vous ne possedez pas PayPal, plusieurs alternatives sont disponibles afin d'effectuer le paiement sans problème. Vous pouvez utiliser des éléments de Brawl Star comme moyen de paiement. Par exemple, vous pouvez utiliser un Brawl Pass normal ou plus ou bien encore de gemmes pour atteindre la valeur du boost."
 },
 {
 question: "Comment puis-je être sûr de ne pas être « scam » ?",
-reponse: "Pour un boost et peu importe la personne, on ne peut pas être sûr de ne pas être scam. C'est à vous de nous faire confiance. Nous pouvons répondre à vos questions sur Discord dès lors que vous ouvrez un ticket."
+reponse: "Pour un boost et peu importe la personne, on ne peut pas être sûr de ne pas être scam. C'est pourquoi nous misons tout sur le sérieux, la sincerité et la qualité du service. Pour l'instant 100% de nos clients sont satisfaits de nos services. On espere que ce texte vous aura rassuré."
 },
 {
 question: "Combien de temps prend le boost avant d'être accompli ?",
-reponse: "Cela dépend du rang que vous avez et de celui que vous souhaitez atteindre. Pour exemple, de Mythique à Légendaire, cela prend entre 6h et 24h au grand maximum."
+reponse: "Le temps nécessaire dépend principalement de l'objectif demandé. Certains boosts peuvent être réalisés en quelques heures, tandis que d'autres demandent plus de temps selon le rang visé, le nombre de trophés à faire et la difficulté. Par exemple, un boost allant de mythique 1 à Légendaire 1 prend en général moins de 48h à être réalisé. Sachez que nous faisons tout notre possible pour réaliser les boosts le plus rapidement possible."
 }
 ];
 
