@@ -3,7 +3,39 @@ const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const { createClient } = supabase;
 const db = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+const MOT_DE_PASSE_ADMIN = "Valentin-revalet1";
+
 let monPseudo = localStorage.getItem("juicy_pseudo") || null;
+let isAdmin = false;
+
+// Vérifie si admin via l'URL
+const params = new URLSearchParams(window.location.search);
+if (params.get("admin") === MOT_DE_PASSE_ADMIN) {
+isAdmin = true;
+document.addEventListener("DOMContentLoaded", () => {
+afficherBandeauAdmin();
+});
+}
+
+function afficherBandeauAdmin() {
+const bandeau = document.createElement("div");
+bandeau.style.cssText = `
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: linear-gradient(90deg, #cc0000, #ff4444);
+color: white;
+text-align: center;
+padding: 8px;
+font-weight: bold;
+font-size: 14px;
+z-index: 9999;
+letter-spacing: 1px;
+`;
+bandeau.textContent = "🔐 MODE ADMINISTRATEUR ACTIVÉ";
+document.body.prepend(bandeau);
+}
 
 async function chargerFile() {
 const { data, error } = await db
@@ -39,6 +71,7 @@ nom.textContent = entry.pseudo;
 li.appendChild(rang);
 li.appendChild(nom);
 
+// Bouton retirer pour la propre personne
 if (monPseudo && entry.pseudo === monPseudo) {
 const btn = document.createElement("button");
 btn.className = "btn-retirer";
@@ -47,13 +80,33 @@ btn.onclick = () => quitterFile(entry.id);
 li.appendChild(btn);
 }
 
+// Bouton admin pour supprimer n'importe qui
+if (isAdmin) {
+const btnAdmin = document.createElement("button");
+btnAdmin.className = "btn-retirer";
+btnAdmin.textContent = "🗑️ Supprimer";
+btnAdmin.style.background = "rgba(255,0,0,0.2)";
+btnAdmin.style.borderColor = "#ff0000";
+btnAdmin.style.color = "#ff4444";
+btnAdmin.style.marginLeft = "8px";
+btnAdmin.onclick = () => supprimerAdmin(entry.id, entry.pseudo);
+li.appendChild(btnAdmin);
+}
+
 liste.appendChild(li);
 });
 }
 
+async function supprimerAdmin(id, pseudo) {
+const confirmer = confirm(`❓ Supprimer "${pseudo}" de la file ?`);
+if (!confirmer) return;
+await db.from("file_attente").delete().eq("id", id);
+chargerFile();
+}
+
 async function rejoindreFile() {
 if (!monPseudo) {
-const saisi = prompt("✏ Entre ton pseudo Discord :");
+const saisi = prompt("✏️ Entre ton pseudo Discord :");
 if (!saisi || saisi.trim() === "") return;
 monPseudo = saisi.trim();
 localStorage.setItem("juicy_pseudo", monPseudo);
@@ -85,7 +138,6 @@ chargerFile();
 async function quitterFile(id) {
 const confirmer = confirm("❓ Tu veux vraiment te retirer de la file ?");
 if (!confirmer) return;
-
 await db.from("file_attente").delete().eq("id", id);
 localStorage.removeItem("juicy_pseudo");
 monPseudo = null;
