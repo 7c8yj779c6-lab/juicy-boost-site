@@ -34,17 +34,35 @@ Cliquez ici pour rejoindre
 </div>
 </div>
 
-<!-- Case Boosters -->
-<div id="boosters-box">
-<h2>👥 Nos Boosters</h2>
-<div id="boosters-grid">
-<img src="sylvdreigon.png" alt="Sylvdreigon" class="booster-img">
-<img src="xero.jpeg" alt="REV | xero" class="booster-img">
-<img src="soja.jpeg" alt="Soja" class="booster-img">
-<img src="Juicy.png" alt="Juicy aura." class="booster-img">
+<!-- Case FAQ -->
+<div id="faq-box">
+<h2>❓ FAQ</h2>
+<div id="faq-liste">
+
+<div class="faq-question" onclick="ouvrirFaq(0)">
+Qu'est-ce qu'un boost ?
+</div>
+<div class="faq-question" onclick="ouvrirFaq(1)">
+Je n'ai pas PayPal, comment puis-je payer ?
+</div>
+<div class="faq-question" onclick="ouvrirFaq(2)">
+Comment puis-je être sûr de ne pas être « scam » ?
+</div>
+<div class="faq-question" onclick="ouvrirFaq(3)">
+Combien de temps prend le boost ?
+</div>
+
 </div>
 </div>
 
+<!-- Fenêtre FAQ -->
+<div id="faq-overlay" onclick="fermerFaq()">
+<div id="faq-modal" onclick="event.stopPropagation()">
+<button id="faq-close" onclick="fermerFaq()">✕</button>
+<h3 id="faq-modal-question"></h3>
+<p id="faq-modal-reponse"></p>
+</div>
+</div>
 </div>
 
 <!-- COLONNE CENTRE : file d'attente -->
