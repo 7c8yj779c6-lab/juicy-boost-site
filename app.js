@@ -93,7 +93,14 @@ btnAdmin.onclick = () => supprimerAdmin(entry.id, entry.pseudo);
 li.appendChild(btnAdmin);
 }
 
+li.style.opacity = "0";
+li.style.transform = "translateY(-10px)";
+li.style.transition = "opacity 0.5s ease, transform 0.5s ease";
 liste.appendChild(li);
+setTimeout(() => {
+li.style.opacity = "1";
+li.style.transform = "translateY(0)";
+}, 50 * index);
 });
 }
 
