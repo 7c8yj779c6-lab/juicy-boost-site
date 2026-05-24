@@ -471,23 +471,24 @@ position: absolute;
 top: 10px;
 right: 12px;
 background: transparent;
-border: none;
-color: black;
+border: 1px solid #00cfff;
+color: #00cfff;
 font-size: 14px;
 cursor: pointer;
 font-weight: bold;
-background: white;
-width: 20px;
-height: 20px;
+width: 22px;
+height: 22px;
 border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-line-height: 1;
+box-shadow: 0 0 6px #00cfff, 0 0 12px rgba(0,207,255,0.4);
+transition: all 0.2s;
 }
 
 #faq-close:hover {
-background: #ddd;
+background: rgba(0, 207, 255, 0.15);
+box-shadow: 0 0 10px #00cfff, 0 0 20px rgba(0,207,255,0.6);
 }
 
 #faq-modal-question {
