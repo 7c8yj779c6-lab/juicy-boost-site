@@ -56,11 +56,8 @@ animation: battre-cadre 1.8s ease-in-out infinite;
 font-family: 'Arial Black', sans-serif;
 font-size: clamp(28px, 4vw, 52px);
 font-weight: 900;
-color: #00cfff;
-text-shadow:
-0 0 8px #00cfff,
-0 0 18px #00cfff,
-0 0 35px rgba(0, 207, 255, 0.6);
+color: white;
+text-shadow: none;
 letter-spacing: 2px;
 animation: battre 1.8s ease-in-out infinite;
 text-align: center;
