@@ -169,7 +169,15 @@ reponse: "Le temps nécessaire dépend principalement de l'objectif demandé. Ce
 
 function ouvrirFaq(index) {
 document.getElementById("faq-modal-question").textContent = FAQ[index].question;
-document.getElementById("faq-modal-reponse").textContent = FAQ[index].reponse;
+
+const reponseElement = document.getElementById("faq-modal-reponse");
+
+if (index === 1) {
+reponseElement.innerHTML = `Ne vous inquiétez pas, à la place de l'argent, vous pouvez envoyer un Brawl Pass et le boost s'effectuera quand même. Vous pouvez acheter un Brawl Pass ici : <a href="https://store.supercell.com" target="_blank" style="color:#00cfff; text-decoration:underline;">store.supercell.com</a>`;
+} else {
+reponseElement.textContent = FAQ[index].reponse;
+}
+
 document.getElementById("faq-overlay").classList.add("actif");
 }
 
