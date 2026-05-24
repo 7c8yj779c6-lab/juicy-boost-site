@@ -155,7 +155,7 @@ reponse: "Un boost est un service que l'on demandeà quelqu'un afin d'augmenter 
 },
 {
 question: "Je n'ai pas PayPal, comment puis-je payer ?",
-reponse: "Ne vous inquiétez pas, si vous ne possedez pas PayPal, plusieurs alternatives sont disponibles afin d'effectuer le paiement sans problème. Vous pouvez utiliser des éléments de Brawl Star comme moyen de paiement. Par exemple, vous pouvez utiliser un Brawl Pass normal ou plus ou bien encore de gemmes pour atteindre la valeur du boost."
+reponse: "Ne vous inquiétez pas, si vous ne possedez pas PayPal, plusieurs alternatives sont disponibles afin d'effectuer le paiement sans problème. Vous pouvez utiliser des éléments de Brawl Star comme moyen de paiement. Par exemple, vous pouvez utiliser un Brawl Pass normal ou plus ou bien encore de gemmes pour atteindre la valeur du boost. Ces objets virtuels peuvent être achetés ici: https://store.supercell.com"
 },
 {
 question: "Comment puis-je être sûr de ne pas être « scam » ?",
